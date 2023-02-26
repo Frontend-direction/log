@@ -1,0 +1,29 @@
+{
+  "name": "@vpankitickets/frontend-logging",
+  "version": "1.0.12",
+  "description": "",
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "files": [
+    "/build/**/*"
+  ],
+  "scripts": {
+    "clean": "rimraf ./build",
+    "build": "npm run clean && tsc",
+    "local-build": "npm run clean && tsc -w",
+    "test": "jest --config jestconfig.json",
+    "pub": "git add . && git commit -m \"Updates\" && npm version patch && npm run build && npm publish"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^29.4.0",
+    "jest": "^29.4.1",
+    "rimraf": "^4.1.2",
+    "ts-jest": "^29.0.5",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "@microsoft/applicationinsights-web": "^2.8.9"
+  }
+}
